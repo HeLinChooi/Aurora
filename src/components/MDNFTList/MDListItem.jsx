@@ -3,6 +3,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
+import StarIcon from "@mui/icons-material/Star";
+import LockIcon from "@mui/icons-material/Lock";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/material/styles";
@@ -12,7 +14,8 @@ const MDListItem = ({
   date,
   reason,
   accessorName,
-  onClick = () => {},
+  onClick = () => { },
+  isStar = false,
 }) => {
   const theme = useTheme();
   return (
@@ -28,7 +31,13 @@ const MDListItem = ({
         onClick={onClick}
       >
         <ListItemAvatar>
-          <Avatar alt={accessorName} src="/static/images/avatar/1.jpg" />
+          <Avatar sx={{backgroundColor: isStar?"gold": "grey"}}>
+            {
+              isStar ?
+              <StarIcon /> :
+              <LockIcon />
+            }
+          </Avatar>
         </ListItemAvatar>
         <ListItemText
           primary={
@@ -38,7 +47,8 @@ const MDListItem = ({
               </Grid>
               <Grid item>
                 <Typography component="span" variant="body2">
-                  {date.toLocaleDateString("en-gb")}
+                  {/* {date.toLocaleDateString("en-gb")} */}
+                  {date}
                 </Typography>
               </Grid>
             </Grid>
@@ -51,10 +61,10 @@ const MDListItem = ({
                 variant="body2"
                 color="text.primary"
               >
-                {accessorName}
+                {/* {accessorName} */}
               </Typography>
               <Typography component="span" variant="body2">
-                &nbsp;-&nbsp;
+                {/* &nbsp;-&nbsp; */}
                 {reason}
               </Typography>
             </React.Fragment>

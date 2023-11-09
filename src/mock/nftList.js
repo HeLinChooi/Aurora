@@ -9,31 +9,24 @@ about60daysBeforeYesterday.setDate(yesterday.getDate() - 60);
 
 const nftList = [
   {
-    title: "Regular Health Check NFT",
-    date: new Date(),
-    reason: "For usual check-up",
-    accessorName: "Alicer Ng",
-    redirect: true,
-  },
-  // {
-  //   title: "Regular Visit NFT",
-  //   date: yesterday,
-  //   reason: "Review before visit",
-  //   accessorName: "Lim Teck Tian",
-  //   redirect: true
-  // },
-  {
-    title: "Regular Health Check NFT",
-    date: about30daysBeforeYesterday,
-    reason: "For usual medical check-up",
-    accessorName: "Summer Lim",
+    title: "Need vs. Want Challenge",
+    date: "3 days",
+    reason: "Differentiate between needs and wants",
+    // accessorName: "Alicer Ng",
     redirect: true,
   },
   {
-    title: "Leukaemia Report",
-    date: about60daysBeforeYesterday,
-    reason: "Treatment",
-    accessorName: "Vincent Lim",
+    title: "Expense Evaluator",
+    date: "5 days",
+    reason: "Would you buy it again?",
+    // accessorName: "Summer Lim",
+    redirect: true,
+  },
+  {
+    title: "Cost Cutter",
+    date: "3 days",
+    reason: "This purchase is not necessary",
+    // accessorName: "Vincent Lim",
     redirect: true,
   },
 ];

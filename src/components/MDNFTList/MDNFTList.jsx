@@ -58,6 +58,7 @@ const MDNFTList = ({ title, list = [], icon, noViewMore = false }) => {
                 accessorName={accessorName}
                 onClick={onClick}
                 redirect={redirect}
+                isStar={idx === 0}
               />
               {idx !== list.length - 1 && <Divider />}
             </React.Fragment>
