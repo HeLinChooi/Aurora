@@ -15,9 +15,9 @@ import Card from "@mui/material/Card";
 import Chip from "@mui/material/Chip";
 import Alert from "@mui/material/Alert";
 import { styled, alpha } from "@mui/material/styles";
-import panadol from "@Assets/panadol.jpg";
-import cough from "@Assets/cough.jpg";
-import plaster from "@Assets/hansaplast.jfif";
+import panadol from "@Assets/profilePicture.jpg";
+import cough from "@Assets/profilePicture.jpg";
+import plaster from "@Assets/profilePicture.jpg";
 import { display, height } from "@mui/system";
 
 const MyCart = () => {

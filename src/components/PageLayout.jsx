@@ -1,6 +1,5 @@
 import React from "react";
 import BottomNavigation from "@Components/BottomNavigation";
-import Header from "@Components/Header";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -39,7 +38,6 @@ const PageLayout = ({ children, title }) => {
   }
   return (
     <>
-      {/* <Header /> */}
       <GameHeader />
       <Box
         sx={{

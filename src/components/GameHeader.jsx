@@ -13,7 +13,7 @@ const ProgressContainer = styled(Box)(({ theme }) => ({
 
 const ProgressBar = styled(LinearProgress)(({ theme, barcolor }) => ({
   flexGrow: 1,
-  height: 8,
+  height: 11,
   borderRadius: 5,
   margin: theme.spacing(0, 2, 0, 0.5),
   [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -50,7 +50,7 @@ export default function GameHeader() {
       {/* </ProgressContainer> */}
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <LocalFireDepartmentIcon color="error" />
-        <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'error.main', marginLeft: 1 }}>
+        <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'error.main', marginLeft: 0.4 }}>
           {streakCount}
         </Typography>
       </Box>

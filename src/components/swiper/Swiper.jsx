@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import Chip from "@mui/material/Chip";
-import clinic from "@Assets/clinic.jpg";
+import clinic from "@Assets/profilePicture.jpg";
 import { styled, alpha } from "@mui/material/styles";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import DirectionsIcon from "@mui/icons-material/Directions";

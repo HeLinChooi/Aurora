@@ -8,11 +8,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import user1 from "@Assets/user1.jpg";
-import user2 from "@Assets/user2.jpg";
-import user3 from "@Assets/user3.jpg";
-import user4 from "@Assets/user4.jpg";
-import user5 from "@Assets/user5.jpg";
+import user1 from "@Assets/profilePicture.jpg";
+import user2 from "@Assets/profilePicture.jpg";
+import user3 from "@Assets/profilePicture.jpg";
+import user4 from "@Assets/profilePicture.jpg";
+import user5 from "@Assets/profilePicture.jpg";
 import { useTheme } from "@mui/material/styles";
 
 function createData(userProfilePic, name, calories, fat, carbs, protein) {
