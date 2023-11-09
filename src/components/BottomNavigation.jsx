@@ -6,8 +6,14 @@ import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import ScienceIcon from "@mui/icons-material/Science";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ChestIcon from "@Assets/treasure-chest.png";
 import { useNavigate, useLocation } from "react-router";
 
+
+import AuroraIconImage from '../assets/northern-lights.png'; 
+import RewardIconImage from '../assets/treasure-chest.png'; 
+import LeagueImage from '../assets/defence.png'; 
+import ProfileIconImage from '../assets/boy.png'; 
 const valueMap = ["/", "/explore", "/research", "/profile"];
 export default function SimpleBottomNavigation() {
   const location = useLocation();
@@ -37,10 +43,10 @@ export default function SimpleBottomNavigation() {
           navigate(valueMap[newValue]);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Explore" icon={<ExploreIcon />} />
-        <BottomNavigationAction label="Research" icon={<ScienceIcon />} />
-        <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
+        <BottomNavigationAction icon={<img src={AuroraIconImage} alt="Home Icon" style={{ width: 24, height: 24 }} />} />
+        <BottomNavigationAction icon={<img src={RewardIconImage} alt="Reward Icon" style={{ width: 24, height: 24 }} />} />
+        <BottomNavigationAction icon={<img src={LeagueImage} alt="League Icon" style={{ width: 24, height: 24 }} />} />
+        <BottomNavigationAction icon={<img src={ProfileIconImage} alt="Profile Icon" style={{ width: 24, height: 24 }} />} />
       </BottomNavigation>
     </Box>
   );

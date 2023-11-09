@@ -5,12 +5,21 @@ import MDNFTList from "@Components/MDNFTList";
 import "./Home.scss";
 import nftAccessLog from "@Mock/nftAccessLog";
 import nftList from "@Mock/nftList";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
+import CoinIconImage from '../../assets/coin.png';
 const Home = () => {
   return (
     <PageLayout title={"Home"}>
       <Grid container spacing={2}>
+
+        <Grid item xs={12}>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+
+            <img src={CoinIconImage} alt="Coin Icon" style={{ width: '40%', height: 'auto' }} />
+          </Box>
+        </Grid>
+
         <Grid item xs={12}>
           <Typography
             variant="h1"
