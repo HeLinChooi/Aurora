@@ -6,11 +6,11 @@ import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import profilePicture from "@Assets/profilePicture.jpg";
-import CalenderImage from "@Assets/Calendar.png";
 import "./Profile.scss";
 import { Divider, useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
 import { useTheme } from "@emotion/react";
+import ProfileIconImage from '@Assets/boy.png';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -33,13 +33,13 @@ const ProfileGridItem = ({ name, unit, value }) => {
 };
 
 const Profile = () => {
-  const profileInfo = {
-    weight: 60,
-    height: 152,
-    bmi: 25.96,
-    bloodType: "A",
-    status: "OKU",
-  };
+  // const profileInfo = {
+  //   weight: 60,
+  //   height: 152,
+  //   bmi: 25.96,
+  //   bloodType: "A",
+  //   status: "OKU",
+  // };
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
@@ -58,26 +58,25 @@ const Profile = () => {
           <Stack sx={{ mt: 2, mb: 3 }} alignItems="center">
             <Avatar
               alt="Remy Sharp"
-              src={profilePicture}
-              sx={{ width: 56, height: 56, mb: 1 }}
+              src={ProfileIconImage}
+              sx={{ width: 96, height: 96, mb: 1 }}
             />
-            <span>User 1</span>
-            <small>user1@gmail.com</small>
+            <span>Roland</span>
+            <small>roland@gmail.com</small>
           </Stack>
 
           <Grid container spacing={2} justifyContent="center">
             <ProfileGridItem
-              name="Weight"
-              unit="kg"
-              value={profileInfo.weight}
+              name="Points"
+              unit="pt"
+              value={"256"}
             />
             <ProfileGridItem
-              name="Height"
-              unit="cm"
-              value={profileInfo.height}
+              name="League"
+              value={"Silver"}
             />
-            <ProfileGridItem name="BMI" value={profileInfo.bmi} />
-            <ProfileGridItem name="Blood Type" value={profileInfo.bloodType} />
+            {/* <ProfileGridItem name="BMI" value={profileInfo.bmi} /> */}
+            {/* <ProfileGridItem name="Blood Type" value={profileInfo.bloodType} /> */}
             {/* <ProfileGridItem name="Status" value={profileInfo.status} /> */}
             <Grid item xs={12} md={4} lg={2}>
               <Item>
@@ -88,7 +87,7 @@ const Profile = () => {
             </Grid>
           </Grid>
         </div>
-        <img src={CalenderImage} alt="CalenderImage" style={{ width: "100%", height: "100%", marginTop: 12, marginBottom: 6 }} />
+        
         <Stack
           sx={{ mt: 3 }}
           direction="row"

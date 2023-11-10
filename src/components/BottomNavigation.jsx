@@ -10,11 +10,12 @@ import ChestIcon from "@Assets/treasure-chest.png";
 import { useNavigate, useLocation } from "react-router";
 
 
-import AuroraIconImage from '../assets/northern-lights.png'; 
+// import AuroraIconImage from '../assets/northern-lights.png'; 
+import AuroraIconImage from '../assets/aurora-borealis.png'; 
 import RewardIconImage from '../assets/treasure-chest.png'; 
 import LeagueImage from '../assets/defence.png'; 
 import ProfileIconImage from '../assets/boy.png'; 
-const valueMap = ["/", "/explore", "/research", "/profile"];
+const valueMap = ["/", "/achievements", "/league", "/profile"];
 export default function SimpleBottomNavigation() {
   const location = useLocation();
   const pageIdx = valueMap.indexOf(location.pathname);
