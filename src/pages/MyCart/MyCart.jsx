@@ -1,5 +1,5 @@
 import React from "react";
-import PageLayout from "@Components/PageLayout";
+import PageLayout from "../../components/PageLayout";
 import { TransactionContext } from "../context/TransactionContext";
 import { useContext } from "react";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { TransactionContext } from "../context/TransactionContext";
 import { useContext } from "react";
-import PageLayout from "@Components/PageLayout";
+import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import Alert from "@mui/material/Alert";
 import Typography from "@mui/material/Typography";

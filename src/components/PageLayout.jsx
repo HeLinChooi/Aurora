@@ -7,6 +7,7 @@ import ClippedDrawer from "@Components/SideNav/ClippedDrawer";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import GameHeader from "./GameHeader";
+import TitleHeader from "./TitleHeader";
 
 const PageTitle = ({ title }) => {
   if (!title) return <></>;
@@ -25,7 +26,7 @@ const PageTitle = ({ title }) => {
     </>
   );
 };
-const PageLayout = ({ children, title }) => {
+const PageLayout = ({ children, title, showHeader = true, showBottom = true, headerTitle, titleIsGrey }) => {
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("sm"));
   if (isMdUp) {
@@ -38,20 +39,28 @@ const PageLayout = ({ children, title }) => {
   }
   return (
     <>
-      <GameHeader />
+      {
+        showHeader && <GameHeader />
+      }
+      {
+        headerTitle && <TitleHeader headerTitle={headerTitle} titleIsGrey={titleIsGrey}/>
+      }
       <Box
         sx={{
           padding: { xs: "10px", md: "20px" },
           paddingBottom: "67px",
           // margin: "10px",
           // marginBottom: "67px",
+          // backgroundColor: "#000",
           height: "calc(100% - 56px)",
         }}
       >
         {/* <PageTitle title={title} /> */}
         {children}
       </Box>
-      <BottomNavigation />
+      {
+        showBottom && <BottomNavigation />
+      }
     </>
   );
 };

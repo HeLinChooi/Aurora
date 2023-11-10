@@ -1,11 +1,12 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import PageLayout from "@Components/PageLayout";
+import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import profilePicture from "@Assets/profilePicture.jpg";
+import CalenderImage from "@Assets/Calendar.png";
 import "./Profile.scss";
 import { Divider, useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
@@ -80,13 +81,14 @@ const Profile = () => {
             {/* <ProfileGridItem name="Status" value={profileInfo.status} /> */}
             <Grid item xs={12} md={4} lg={2}>
               <Item>
-                <span className="profileInfoKey">Status: </span>
+                <span className="profileInfoKey">Longest Streak: </span>
                 <br style={{ display: matches ? "block" : "none" }} />
-                <span className="profileInfoValue">{profileInfo.status}</span>
+                <span className="profileInfoValue">{"10 Days"}</span>
               </Item>
             </Grid>
           </Grid>
         </div>
+        <img src={CalenderImage} alt="CalenderImage" style={{ width: "100%", height: "100%", marginTop: 12, marginBottom: 6 }} />
         <Stack
           sx={{ mt: 3 }}
           direction="row"

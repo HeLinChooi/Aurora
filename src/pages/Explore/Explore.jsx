@@ -1,5 +1,5 @@
 import React from "react";
-import PageLayout from "@Components/PageLayout";
+import PageLayout from "../../components/PageLayout";
 import Swiper from "@Components/Swiper";
 import OnlinePharmacy from "@Components/OnlinePharmacy";
 import { Divider, Typography } from "@mui/material";

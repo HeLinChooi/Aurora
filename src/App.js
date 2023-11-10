@@ -20,7 +20,7 @@ function App() {
         <Route path={"/research"} element={<Research />} />
         <Route path={"/profile"} element={<Profile />} />
         <Route path={"/my-cart"} element={<MyCart />} />
-        <Route path={"/nft"} element={<NFT />} />
+        <Route path={"/habit"} element={<NFT />} />
         <Route path={"/nft-creation"} element={<NFTCreation />} />
         <Route path={"/notification"} element={<Notification />} />
       </Routes>

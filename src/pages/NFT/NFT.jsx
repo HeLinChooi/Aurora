@@ -1,42 +1,72 @@
 import React from "react";
-import PageLayout from "@Components/PageLayout";
+import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import InfoCard from "@Components/InfoCard";
-import MDBreadcrumbs from "@Components/MDBreadcrumbs";
-import MDNFTList from "@Components/MDNFTList";
-import nftAccessLog from "@Mock/nftAccessLog";
+import { Box, Button } from "@mui/material";
+import IconBar from "../../components/IconBar/IconBar";
+import TriggerIcon from "@Assets/Trigger.png";
+import TrackIcon from "@Assets/Track.png";
+import ReflectIcon from "@Assets/Reflect.png";
+import { useNavigate } from "react-router";
 
 const NFT = () => {
-  const title = "Regular Health Check NFT";
-  const description = "The patient has suffered for weeks";
+  const navigate = useNavigate();
+
   return (
-    <PageLayout>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sx={{ m: 2, mb: 0 }}>
-          <MDBreadcrumbs
-            list={[{ label: "Home", link: "/" }]}
-            currentDirectory="NFT"
-          />
-          <Typography
-            variant="h3"
-            fontWeight="bold"
-            textTransform="capitalize"
-            sx={{ pt: 1 }}
+    <PageLayout showHeader={false} showBottom={false} headerTitle={"Habit Details"} titleIsGrey>
+      <Grid container spacing={2} sx={{ px: 1 }}>
+        <Box sx={{ p: 2 }}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            pt={2}
           >
-            {title}
-          </Typography>
-        </Grid>
+            <Typography
+              variant="h1" fontWeight="bold" textTransform="capitalize">
+              {"Need vs. Want Challenge"}
+            </Typography>
+          </Box>
+          <Box mt={1} lineHeight={1}>
+            <Typography variant="body1" color="text" fontWeight="light">
+              {"This Habit encourages you to distinguish between necessities and desires in your daily spending, fostering more mindful and financially savvy habits."}
+            </Typography>
+          </Box>
+        </Box>
         <Grid item xs={12} md={6}>
-          <InfoCard description={description} />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <MDNFTList
-            title="NFT Access Log"
-            list={nftAccessLog.filter((log) => log.title === title)}
-            icon="history"
-            noViewMore
+          <IconBar
+            icon={TriggerIcon}
+            title={"Trigger"}
+            description="This is a brief description of the habit."
+            backgroundColor="#FEFCFF"
           />
+          <IconBar
+            icon={TrackIcon}
+            title={"Track"}
+            description="This is a brief description of the habit."
+            backgroundColor="#FEFCFF"
+          />
+          <IconBar
+            icon={ReflectIcon}
+            title={"Reflect"}
+            description="This is a brief description of the habit."
+            backgroundColor="#FEFCFF"
+          />
+        </Grid>
+        <Grid item xs={12} md={6} container justifyContent="center">
+          <Grid item>
+            <Button variant="contained" color="primary" sx={{ color: 'black' }} >
+              Edit
+            </Button>
+
+            <Button variant="contained" color="primary" sx={{ color: 'black', ml: 2 }} 
+            onClick={() => {
+              navigate("/");
+            }}
+            >
+              Done
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </PageLayout>

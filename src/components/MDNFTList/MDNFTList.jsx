@@ -48,7 +48,7 @@ const MDNFTList = ({ title, list = [], icon, noViewMore = false }) => {
       >
         {list.map((item, idx) => {
           const { title, date, reason, accessorName, redirect } = item;
-          const onClick = redirect ? () => navigate("/nft") : () => { };
+          const onClick = redirect ? () => navigate("/habit") : () => { };
           return (
             <React.Fragment key={idx}>
               <MDListItem

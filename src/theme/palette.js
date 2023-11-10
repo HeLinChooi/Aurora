@@ -1,4 +1,4 @@
-const primary = "#1E91CF";
+const primary = "#FFDE59";
 const secondary = "#08A74C";
 const accent = "#F4F9FC";
 const textGrey = "#053742";
